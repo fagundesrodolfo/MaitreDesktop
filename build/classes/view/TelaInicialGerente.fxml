@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane minHeight="800.0" minWidth="1280.0" prefHeight="800.0" prefWidth="1280.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.TelaInicialGerenteController">
+  <tabs>
+    <Tab text="Usuarios">
+         <content>
+            <SplitPane dividerPositions="0.35" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <Label layoutX="10.0" layoutY="18.0" prefHeight="45.0" prefWidth="88.0" text="Acesso" />
+                        <ComboBox layoutX="105.0" layoutY="18.0" prefHeight="45.0" prefWidth="329.0" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="18.0" />
+                        <Label layoutX="13.0" layoutY="72.0" prefHeight="45.0" prefWidth="88.0" text="Nome" />
+                        <TextField fx:id="editNomePesquisaUsuarios" layoutX="105.0" layoutY="76.0" prefHeight="45.0" prefWidth="326.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="10.0" />
+                        <Button fx:id="btnFiltrarPesquisaUsuarios" layoutX="70.0" layoutY="136.0" mnemonicParsing="false" onAction="#filtrarUsuarios" prefHeight="45.0" prefWidth="298.0" text="Filtrar" />
+                        <HBox layoutX="-1.0" layoutY="194.0" prefHeight="323.0" prefWidth="444.0" AnchorPane.bottomAnchor="277.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="200.0">
+                           <children>
+                              <VBox minWidth="-Infinity" prefHeight="600.0" prefWidth="75.0" snapToPixel="false">
+                                 <children>
+                                    <Label minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="150.0" text="Nome" />
+                                    <Label minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="150.0" text="Login" />
+                                    <Label minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="150.0" text="Acesso" />
+                                    <Label minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="150.0" text="Email" />
+                                    <Label minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="150.0" text="Ativo" />
+                                    <Label minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="150.0" text="Label" />
+                                 </children>
+                              </VBox>
+                              <VBox prefWidth="373.0">
+                                 <children>
+                                    <TextField prefHeight="45.0" />
+                                    <TextField prefHeight="45.0" />
+                                    <ComboBox prefHeight="45.0" prefWidth="369.0" />
+                                    <TextField prefHeight="45.0" />
+                                    <ComboBox prefHeight="45.0" prefWidth="150.0" />
+                                    <TextField prefHeight="45.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <VBox layoutX="18.0" layoutY="493.0" prefHeight="230.0" prefWidth="409.0">
+                           <children>
+                              <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="407.0" text="Salvar" />
+                              <Label />
+                              <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="407.0" text="Bloquear" />
+                              <Label />
+                              <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="407.0" text="Inserir" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <TableView layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                          <columns>
+                            <TableColumn maxWidth="200.0" minWidth="100.0" prefWidth="150.0" text="Nome" />
+                            <TableColumn maxWidth="200.0" minWidth="100.0" prefWidth="150.0" text="Login" />
+                              <TableColumn maxWidth="150.0" minWidth="75.0" prefWidth="100.0" text="Acesso" />
+                              <TableColumn maxWidth="100.0" minWidth="75.0" prefWidth="75.0" text="Ativo" />
+                              <TableColumn maxWidth="150.0" minWidth="125.0" prefWidth="150.0" text="UltimoAcesso" />
+                              <TableColumn maxWidth="200.0" minWidth="150.0" prefWidth="150.0" text="Email" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </content></Tab>
+      <Tab text="Produtos">
+         <content>
+            <SplitPane dividerPositions="0.35" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0">
+               <items>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <Label layoutX="10.0" layoutY="18.0" prefHeight="45.0" prefWidth="88.0" text="Categoria" />
+                        <ComboBox layoutX="105.0" layoutY="18.0" prefHeight="45.0" prefWidth="329.0" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="18.0" />
+                        <Label layoutX="13.0" layoutY="72.0" prefHeight="45.0" prefWidth="88.0" text="Nome" />
+                        <TextField fx:id="editNomePesquisaProdutos" layoutX="105.0" layoutY="76.0" prefHeight="45.0" prefWidth="326.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="10.0" />
+                        <Button layoutX="70.0" layoutY="136.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="298.0" text="Filtrar" />
+                        <HBox layoutX="-1.0" layoutY="194.0" prefHeight="323.0" prefWidth="444.0" AnchorPane.bottomAnchor="277.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="200.0">
+                           <children>
+                              <VBox minWidth="-Infinity" prefHeight="600.0" prefWidth="75.0" snapToPixel="false">
+                                 <children>
+                                    <Label minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="150.0" text="Codigo" />
+                                    <Label minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="150.0" text="Nome" />
+                                    <Label minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="150.0" text="Descriçao" />
+                                    <Label minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="150.0" text="Valor" />
+                                    <Label minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="150.0" text="Categoria" />
+                                    <Label minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="150.0" text="Label" />
+                                 </children>
+                              </VBox>
+                              <VBox prefWidth="373.0">
+                                 <children>
+                                    <TextField prefHeight="45.0" />
+                                    <TextField prefHeight="45.0" />
+                                    <TextField prefHeight="45.0" />
+                                    <TextField prefHeight="45.0" />
+                                    <ComboBox prefHeight="45.0" prefWidth="374.0" />
+                                    <TextField prefHeight="45.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <VBox layoutX="18.0" layoutY="493.0" prefHeight="230.0" prefWidth="409.0">
+                           <children>
+                              <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="407.0" text="Salvar" />
+                              <Label />
+                              <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="407.0" text="Apagar" />
+                              <Label />
+                              <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="407.0" text="Cancelar" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <TableView layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                           <columns>
+                              <TableColumn maxWidth="200.0" minWidth="100.0" prefWidth="150.0" text="Codigo" />
+                              <TableColumn maxWidth="200.0" minWidth="100.0" prefWidth="150.0" text="Nome" />
+                              <TableColumn maxWidth="200.0" minWidth="150.0" prefWidth="150.0" text="Categoria" />
+                              <TableColumn maxWidth="200.0" minWidth="150.0" prefWidth="150.0" text="Descriçao" />
+                              <TableColumn maxWidth="150.0" minWidth="125.0" prefWidth="150.0" text="Valor" />
+                              <TableColumn maxWidth="200.0" minWidth="150.0" prefWidth="150.0" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </items>
+            </SplitPane>
+         </content>
+      </Tab>
+      <Tab text="Mesas">
+         <content>
+            <SplitPane dividerPositions="0.35" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0">
+               <items>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <Label layoutX="10.0" layoutY="18.0" prefHeight="45.0" prefWidth="88.0" text="Garçon" />
+                        <ComboBox layoutX="105.0" layoutY="18.0" prefHeight="45.0" prefWidth="329.0" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="18.0" />
+                        <Label layoutX="13.0" layoutY="72.0" prefHeight="45.0" prefWidth="88.0" text="Numero" />
+                        <TextField fx:id="editNumeroMesaPesquisa" layoutX="105.0" layoutY="76.0" prefHeight="45.0" prefWidth="326.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="10.0" />
+                        <Button fx:id="btnFiltrarPesquisaMesas" layoutX="70.0" layoutY="136.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="298.0" text="Filtrar" />
+                        <VBox layoutX="18.0" layoutY="493.0" prefHeight="230.0" prefWidth="409.0">
+                           <children>
+                              <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="407.0" text="Novo Pedido" />
+                              <Label />
+                              <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="407.0" text="Encerrar" />
+                              <Label />
+                              <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="407.0" text="Abrir" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <TableView layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                           <columns>
+                              <TableColumn maxWidth="200.0" minWidth="100.0" prefWidth="150.0" text="Mesa" />
+                              <TableColumn maxWidth="200.0" minWidth="100.0" prefWidth="150.0" text="Quantidade Pedidos" />
+                              <TableColumn maxWidth="200.0" minWidth="150.0" prefWidth="150.0" text="Ultimo Pedido" />
+                              <TableColumn maxWidth="200.0" minWidth="150.0" prefWidth="150.0" text="Total" />
+                              <TableColumn maxWidth="150.0" minWidth="125.0" prefWidth="150.0" text="Garçon" />
+                              <TableColumn maxWidth="200.0" minWidth="150.0" prefWidth="150.0" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </items>
+            </SplitPane>
+         </content>
+      </Tab>
+      <Tab text="Itens Vendidos">
+         <content>
+            <SplitPane dividerPositions="0.35" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0">
+               <items>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <Label layoutX="10.0" layoutY="18.0" prefHeight="45.0" prefWidth="88.0" text="Data Inicio" />
+                        <Label layoutX="13.0" layoutY="72.0" prefHeight="45.0" prefWidth="88.0" text="Data Fim" />
+                        <TextField layoutX="105.0" layoutY="76.0" prefHeight="45.0" prefWidth="326.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="10.0" />
+                        <Button layoutX="73.0" layoutY="292.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="298.0" text="Filtrar" />
+                        <TextField layoutX="99.0" layoutY="17.0" prefHeight="45.0" prefWidth="332.0" />
+                        <TextField layoutX="100.0" layoutY="138.0" prefHeight="45.0" prefWidth="332.0" />
+                        <TextField layoutX="97.0" layoutY="197.0" prefHeight="45.0" prefWidth="335.0" />
+                        <Label layoutX="14.0" layoutY="193.0" prefHeight="45.0" prefWidth="88.0" text="Produto" />
+                        <Label layoutX="11.0" layoutY="139.0" prefHeight="45.0" prefWidth="88.0" text="Categoria" />
+                        <Label layoutX="13.0" layoutY="400.0" prefHeight="45.0" prefWidth="188.0" text="Valor Total R$ 0,00" />
+                        <Label layoutX="16.0" layoutY="454.0" prefHeight="45.0" prefWidth="181.0" text="Unidades Vendidas: 0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <TableView layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                           <columns>
+                              <TableColumn maxWidth="200.0" minWidth="100.0" prefWidth="150.0" text="Mesa" />
+                              <TableColumn maxWidth="200.0" minWidth="100.0" prefWidth="150.0" text="Quantidade Pedidos" />
+                              <TableColumn maxWidth="200.0" minWidth="150.0" prefWidth="150.0" text="Ultimo Pedido" />
+                              <TableColumn maxWidth="200.0" minWidth="150.0" prefWidth="150.0" text="Total" />
+                              <TableColumn maxWidth="150.0" minWidth="125.0" prefWidth="150.0" text="Garçon" />
+                              <TableColumn maxWidth="200.0" minWidth="150.0" prefWidth="150.0" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </items>
+            </SplitPane>
+         </content>
+      </Tab>
+      <Tab text="Vendas">
+         <content>
+            <SplitPane dividerPositions="0.35" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0">
+               <items>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <Label layoutX="10.0" layoutY="18.0" prefHeight="45.0" prefWidth="88.0" text="Data Inicio" />
+                        <Label layoutX="13.0" layoutY="72.0" prefHeight="45.0" prefWidth="88.0" text="Data Fim" />
+                        <TextField layoutX="105.0" layoutY="76.0" prefHeight="45.0" prefWidth="326.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="10.0" />
+                        <Button layoutX="73.0" layoutY="292.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="298.0" text="Filtrar" />
+                        <TextField layoutX="99.0" layoutY="17.0" prefHeight="45.0" prefWidth="332.0" />
+                        <Label layoutX="13.0" layoutY="400.0" prefHeight="45.0" prefWidth="188.0" text="Valor Total R$ 0,00" />
+                        <Label layoutX="16.0" layoutY="454.0" prefHeight="45.0" prefWidth="181.0" text="Total" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <TableView layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                           <columns>
+                              <TableColumn maxWidth="200.0" minWidth="100.0" prefWidth="150.0" text="Mesa" />
+                              <TableColumn maxWidth="200.0" minWidth="100.0" prefWidth="150.0" text="Valor" />
+                              <TableColumn maxWidth="200.0" minWidth="150.0" prefWidth="150.0" text="Abertura" />
+                              <TableColumn maxWidth="200.0" minWidth="150.0" prefWidth="150.0" text="Fechamento" />
+                              <TableColumn maxWidth="150.0" minWidth="125.0" prefWidth="150.0" text="Funcionario" />
+                              <TableColumn maxWidth="200.0" minWidth="150.0" prefWidth="150.0" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </items>
+            </SplitPane>
+         </content>
+      </Tab>
+      <Tab text="Log">
+         <content>
+            <SplitPane dividerPositions="0.35" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0">
+               <items>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <Label layoutX="10.0" layoutY="18.0" prefHeight="45.0" prefWidth="88.0" text="Data Inicio" />
+                        <Label layoutX="13.0" layoutY="72.0" prefHeight="45.0" prefWidth="88.0" text="Data Fim" />
+                        <TextField layoutX="105.0" layoutY="76.0" prefHeight="45.0" prefWidth="326.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="10.0" />
+                        <Button layoutX="73.0" layoutY="292.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="298.0" text="Filtrar" />
+                        <TextField layoutX="99.0" layoutY="17.0" prefHeight="45.0" prefWidth="332.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <TableView layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                           <columns>
+                              <TableColumn maxWidth="200.0" minWidth="100.0" prefWidth="150.0" text="Mesa" />
+                              <TableColumn maxWidth="200.0" minWidth="100.0" prefWidth="150.0" text="Valor" />
+                              <TableColumn maxWidth="200.0" minWidth="150.0" prefWidth="150.0" text="Abertura" />
+                              <TableColumn maxWidth="200.0" minWidth="150.0" prefWidth="150.0" text="Fechamento" />
+                              <TableColumn maxWidth="150.0" minWidth="125.0" prefWidth="150.0" text="Funcionario" />
+                              <TableColumn maxWidth="200.0" minWidth="150.0" prefWidth="150.0" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </items>
+            </SplitPane>
+         </content>
+      </Tab>
+  </tabs>
+</TabPane>
